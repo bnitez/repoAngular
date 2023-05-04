@@ -1,0 +1,53 @@
+<form class="mt-4">
+  <div class="g-2 align-items-center" id="contenedorGeneral">
+    <div class="contenedorFormulario col-md-6" >
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-2">
+            <label class="visually-hidden" for="inlineFormInputGroupUsername">Nombre</label>
+            <div class="input-group">
+              <div class="input-group-text"><span class="material-symbols-outlined">person</span></div>
+              <input type="text" class="form-control" id="nombre"  placeholder="Nombre" #nombre>
+            </div>
+          </div>
+          <div class="mb-2">
+            <label class="visually-hidden" for="inlineFormInputGroupUsername">Edad</label>
+            <div class="input-group">
+              <div class="input-group-text"><span class="material-symbols-outlined">contact_mail</span></div>
+              <input type="text" class="form-control" id="edad" placeholder="Edad" #edad>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-2">
+            <label class="visually-hidden" for="inlineFormInputGroupUsername">Direccion</label>
+            <div class="input-group">
+              <div class="input-group-text"><span class="material-symbols-outlined">pin_drop</span></div>
+              <input type="text" class="form-control" id="direccion" placeholder="Direccion" #direccion>
+            </div>
+          </div>
+          <div class="mb-2">
+            <label class="visually-hidden" for="inlineFormInputGroupUsername">Cursos</label>
+            <div class="input-group">
+              <div class="input-group-text"><span class="material-symbols-outlined">receipt_long</span></div>
+              <select class="form-select form-select-sm" id="eleccion" aria-label=".form-select-sm example" #eleccion>
+                <option value="" selected>Seleccione el curso..</option>
+                <option [value]="item" *ngFor="let item of listaCursos" >{{ item }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="" id="contenedorBotones">
+        <button type="button" (click)="getInscribir(nombre.value,edad.value,direccion.value,eleccion.value)" class="btn btn-success"><span class="material-symbols-outlined">save</span>REGISTRAR</button>
+        <button type="button" (click)="borrarDatos()" class="btn btn-light"><span class="material-symbols-outlined">auto_delete</span>BORRAR</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="respuesta" class="alert alert-warning" role="alert">
+  <!-- <div class="alert alert-warning" role="alert"> -->
+    {{respuesta}}
+  </div>
+</form>
