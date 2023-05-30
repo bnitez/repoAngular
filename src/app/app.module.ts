@@ -8,6 +8,10 @@ import { FooterComponent } from './footer/footer.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
 import { ProfesorComponent } from './profesor/profesor.component';
+import { NotasComponent } from './notas/notas.component';
+import { CounterComponent } from './contador/counter/counter.component';
+import { AddComponent } from './contador/counter/add/add.component';
+import { MinComponent } from './contador/counter/min/min.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { ProfesorComponent } from './profesor/profesor.component';
     HeaderComponent,
     FooterComponent,
     FormularioComponent,
-    ProfesorComponent
+    ProfesorComponent,
+    NotasComponent,
+    CounterComponent,
+    AddComponent,
+    MinComponent
   ],
   imports: [
     BrowserModule,
